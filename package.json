@@ -1,0 +1,5 @@
+{
+  "scripts": {
+    "lint": "eslint --rulesdir path/to/your/rules/ --max-warnings=0 ."
+  }
+}
