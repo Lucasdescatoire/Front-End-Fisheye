@@ -11,7 +11,7 @@
     <title>Fisheye - photographe</title>
   </head>
   <body>
-    <header>
+    <header aria-hidden="false">
       <a href="./index.html">
         <img
           src="assets/images/logo.png"
@@ -20,7 +20,7 @@
         />
       </a>
     </header>
-    <main class="profil">
+    <main class="profil" aria-hidden="false">
       <section aria-label="presentation" class="profil__header">
         <div class="profil__presentation">
           <h1 id="profilName" class="name-title">Name</h1>
@@ -94,7 +94,7 @@
       </div>
     </main>
 
-    <div class="modal" aria-describedby="modalTitle">
+    <div class="modal"  aria-hidden="true" aria-describedby="modalTitle">
       <header>
         <h1 id="modalTitle">Contactez-moi</h1>
         <button class="contact_close_button" onclick="closeModal()">
@@ -155,9 +155,10 @@
     </div>
     <script src="/scripts/utils/focusInContainer.js"></script>
     <script src="/scripts/utils/contactForm.js"></script>
-    <script src="/scripts/utils/selectForm.js"></script>
+    <script src="/scripts/utils/selectForm.js"></script>  
     <script src="/scripts/utils/lightbox.js"></script>
     <script src="/scripts/factories/media.js"></script>
     <script src="/scripts/pages/photographer.js"></script>
+    
   </body>
 </html>

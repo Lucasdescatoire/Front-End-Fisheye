@@ -35,7 +35,12 @@ form.addEventListener("submit", function (e) {
     closeModal();
   }
 });
-
+function setFocusOnlyInContainer(
+  classContainer,
+  classFirstElement,
+  classLastElement,
+  closeContainer = null
+) 
 setFocusOnlyInContainer(
   ".modal",
   ".contact_close_button",
