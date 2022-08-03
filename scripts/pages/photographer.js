@@ -6,8 +6,10 @@ let allLikes = 0; // Tout les likes des médias
 
 //Obtenir l'ID du photographe pour charger les données
 function getParamsUrl(url) {
-  let string = url.search;
-  return string.substring(3);
+  let params=new
+  URL(url).searchParams
+  let id= params.get("i");
+  return parseInt(id)
 }
 const idUser = getParamsUrl(window.location);
 function mediaFactory(data) {
