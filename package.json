@@ -90,7 +90,7 @@
     "@babel/eslint-parser": "^7.18.2",
     "babel-eslint": "^10.1.0"
   },
-  "eslintIgnore": ["lightbox.js", "media.js","photographer.js","contactForm.js","FocusInContainer.js","selectForm.js"],
+  
   "keywords": [],
   "author": "",
   "license": "ISC"

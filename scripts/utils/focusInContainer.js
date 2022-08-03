@@ -1,4 +1,5 @@
 //Garder le focus uniquement dans les formulaires, lightbox, select, ect..
+// eslint-disable-next-line no-unused-vars
 function setFocusOnlyInContainer(
   classContainer,
   classFirstElement,

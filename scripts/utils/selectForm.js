@@ -19,6 +19,7 @@ function handleDropdownToggle(show) {
 function handleOption(option) {
   if (option.getAttribute("aria-selected") == "false") {
     dropdownList.insertBefore(option, dropdownList.firstChild);
+    // eslint-disable-next-line no-undef
     sortMedia(option.dataset.name);
     dropdownToggle.innerText = option.innerText;
     let oldActiveOption = document.querySelector(
@@ -40,6 +41,7 @@ dropdownOptions.forEach((option) => {
   });
 });
 
+// eslint-disable-next-line no-undef
 setFocusOnlyInContainer(
   ".dropdown-list",
   ".dropdown-list li:first-child",

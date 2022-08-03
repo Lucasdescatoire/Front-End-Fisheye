@@ -3,6 +3,7 @@ const form = document.forms["contact"];
 const closeBtnForm = document.querySelector(".contact_close_button");
 const submitBtn = document.querySelector("button[type='submit']");
 
+// eslint-disable-next-line no-unused-vars
 function displayModal() {
   modal.style.display = "flex";
   closeBtnForm.focus();
@@ -35,15 +36,5 @@ form.addEventListener("submit", function (e) {
     closeModal();
   }
 });
-function setFocusOnlyInContainer(
-  classContainer,
-  classFirstElement,
-  classLastElement,
-  closeContainer = null
-) 
-setFocusOnlyInContainer(
-  ".modal",
-  ".contact_close_button",
-  "button[type='submit']",
-  closeModal
-);
+
+

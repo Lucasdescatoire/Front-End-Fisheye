@@ -2,6 +2,7 @@ const lightbox = document.querySelector("#lightbox_media");
 const lightboxMedia = document.querySelector(".lightbox_media__content");
 const closeMediaBtn = document.querySelector("#close-lightbox_media");
 
+// eslint-disable-next-line no-unused-vars
 function openLightbox(id) {
   setMediaLightbox(id);
   lightbox.style.display = "block";
@@ -29,16 +30,20 @@ function setMediaLightbox(id) {
 
 // Recherche quelle media afficher
 function changeMediaLightBox(index) {
+  // eslint-disable-next-line no-undef
   let indexListMedia = listMediaId.findIndex(
     (id) => id == lightboxMedia.firstChild.dataset.id
   );
   if (indexListMedia + index < 0) {
+    // eslint-disable-next-line no-undef
     indexListMedia = listMediaId.length - 1;
+  // eslint-disable-next-line no-undef
   } else if (indexListMedia + index == listMediaId.length) {
     indexListMedia = 0;
   } else {
     indexListMedia += index;
   }
+  // eslint-disable-next-line no-undef
   setMediaLightbox(listMediaId[indexListMedia]);
 }
 
@@ -53,6 +58,7 @@ document.addEventListener("keydown", (event) => {
   }
 });
 
+// eslint-disable-next-line no-undef
 setFocusOnlyInContainer(
   "#lightbox_media",
   "#close-lightbox_media",

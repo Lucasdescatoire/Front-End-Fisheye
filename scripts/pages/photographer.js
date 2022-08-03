@@ -101,10 +101,11 @@ function setProfilMedia(media) {
     let li = media.createElement();
     profilMedia.innerHTML += li;
   });
-  listMedia = document.querySelectorAll("#profil__media li");
+  listMediaId = document.querySelectorAll("#profil__media li");
   sortMedia("likes");
 }
 
+// eslint-disable-next-line no-unused-vars
 function likeEvent(event) {
   let classList = event.classList;
   let likeContainer = classList.contains("like") ? event : event.parentNode;
@@ -122,7 +123,7 @@ function likeEvent(event) {
 
 function sortMedia(type) {
   if (type != typeSort) {
-    let array = [...listMedia];
+    let array = [...listMediaId];
 
     array.sort(function (a, b) {
       let value1;
