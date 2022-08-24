@@ -12,36 +12,6 @@ function getParamsUrl(url) {
   return parseInt(id)
 }
 const idUser = getParamsUrl(window.location);
-function mediaFactory(data) {
-  let type = data.video ? "video" : "image";
-
-  function createElement() {
-    let element;
-    if (type == "image") {
-      element = `<img src=assets/media/${data.photographerId}/${data.image} alt="${data.title}" data-id=${data.id}></img>`;
-    } else if (type == "video") {
-      element = `<video src=assets/media/${data.photographerId}/${data.video}#t=0.1 alt="${data.title}" data-id=${data.id} preload="metadata"></video>`;
-     
-    }
-
-    const li = `
-              <li class="media" data-date=${data.date} data-likes=${data.likes} data-title=${data.title}>
-                <a href="#" class="media__link" onclick="openLightbox('${data.id}')">
-                  ${element}
-                </a>
-                <div class="media__info">
-                  <p>${data.title}</p>
-                  <button class="like" onclick="likeEvent(this)" >
-                    <p>${data.likes}</p>
-                    <img src="assets/icons/heart.svg" alt="coeur"/>  
-                  </button>
-                </div>
-              </li>
-            `;
-    return li;
-  }
-  return { type, createElement };
-}
 
 async function setData() {
   let response = await fetch("../data/photographers.json");
@@ -99,11 +69,13 @@ function setProfilHeader(photographer) {
 //Ajoute tout les medias du photographe
 function setProfilMedia(media) {
   media.forEach((element) => {
+    // eslint-disable-next-line no-undef
     let media = mediaFactory(element);
     let li = media.createElement();
     profilMedia.innerHTML += li;
   });
-  listMediaId = document.querySelectorAll("#profil__media li");
+  // eslint-disable-next-line no-undef
+  listMedia = document.querySelectorAll("#profil__media li");
   sortMedia("likes");
 }
 
@@ -125,7 +97,8 @@ function likeEvent(event) {
 
 function sortMedia(type) {
   if (type != typeSort) {
-    let array = [...listMediaId];
+    // eslint-disable-next-line no-undef
+    let array = [...listMedia];
 
     array.sort(function (a, b) {
       let value1;

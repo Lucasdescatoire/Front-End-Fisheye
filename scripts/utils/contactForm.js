@@ -1,4 +1,5 @@
 const modal = document.querySelector(".modal");
+const modalbg = document.querySelector(".bground");
 const form = document.forms["contact"];
 const closeBtnForm = document.querySelector(".contact_close_button");
 const submitBtn = document.querySelector("button[type='submit']");
@@ -6,6 +7,7 @@ const submitBtn = document.querySelector("button[type='submit']");
 // eslint-disable-next-line no-unused-vars
 function displayModal() {
   modal.style.display = "flex";
+  modalbg.style.display = "block";
   closeBtnForm.focus();
 }
 

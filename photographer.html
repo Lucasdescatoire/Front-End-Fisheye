@@ -93,8 +93,9 @@
         <p id="photographer-price-day"></p>
       </div>
     </main>
-
+    
     <div class="modal"  aria-hidden="true" aria-describedby="modalTitle">
+      <div class="bground">
       <header>
         <h1 id="modalTitle">Contactez-moi</h1>
         <button class="contact_close_button" onclick="closeModal()">
@@ -105,28 +106,33 @@
           />
         </button>
       </header>
+      
       <form name="contact">
         <div>
           <label for="firstName">Prénom</label>
-          <input type="text" name="firstName" id="firstName" />
+          <input type="text" name="firstName" id="firstName" pattern="(?=.*[a-z]).{2,}" placeholder="entrez votre prenom"> 
+          
         </div>
         <div>
           <label for="name">Nom</label>
-          <input type="text" name="name" id="name" />
+          <input type="text" name="name" id="name" pattern="(?=.*[a-z]).{2,}" placeholder="entrez votre nom" />
         </div>
         <div>
           <label for="email">Email</label>
-          <input type="email" name="email" id="email" />
+          <input type="email" name="email" id="email" placeholder="igor.ogor@gmail.com"/>
         </div>
         <div>
           <label for="message">Votre message</label>
-          <textarea rows="5" cols="33" id="message"></textarea>
+          <textarea rows="5" cols="33" id="message"placeholder="Votre message "></textarea>
+          
         </div>
         <button class="contact_button" type="submit" aria-label="envoyer">
           Envoyer
         </button>
       </form>
     </div>
+    </div>
+  
 
     <div id="lightbox_media">
       <button
