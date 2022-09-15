@@ -1,76 +1,100 @@
-#contact_modal {
-    display: none;
+.profil {
+  margin: 0 5em;
+}
+.profil__header {
+  display: flex;
+  justify-content: space-between;
+  background-color: #fafafa;
+  padding: 2em;
 }
 
-.photograph-header {
-    background-color: #FAFAFA;
-    height: 300px;
-    margin: 0 100px;
+.profil__presentation {
+  width: 100%;
 }
 
-.contact_button {
-    font-size: 20px;
-    font-weight: bold;
-    color: white;
-    padding: 11px;
-    width: 170px;
-    height: 70px;
-    border: none;
-    background-color: #901C1C;
-    border-radius: 5px;
-    cursor: pointer;
+.profil__presentation h1 {
+  font-size: 3em;
+  text-align: start;
+  color: #d3576c;
 }
 
-.modal {
-    border-radius: 5px;
-    background-color: #DB8876;
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    padding: 35px;
-    margin: auto;
+.profil__info {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  margin: 1em 0;
 }
 
-.modal header {
-    justify-content: space-between;
-    width: 100%;
+.photographer-info {
+  position: fixed;
+  bottom: 0;
+  right: 40px;
+  background-color: #db8876;
+  color: black;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 20px;
+  border-radius: 5px 5px 0 0;
+  width: 300px;
 }
 
-.modal header img {
-    cursor: pointer;
+.photographer-info img {
+  filter: brightness(0%);
+  filter: opacity(0.4) drop-shadow(blue); 
 }
 
-.modal header h2 {
-    font-size: 64px;
-    font-weight: normal;
-    text-align: center;
+.photographer-info div {
+  display: flex;
+  gap: 4px;
 }
 
-form {
-    display: flex;
-    width: 100%;
-    flex-direction: column;
-    align-items: flex-start;
+.profil__contact {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.profil__contact button {
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  padding: 20px 11px;
+  border: none;
+  background-color: #901c1c;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-form label {
-    color: #312E2E;
-    font-size: 36px;
+.profil__contact button:hover,
+profil__contact button:focus {
+  background-color: #d3576c;
+  color: black;
 }
 
-form div {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    align-items: self-start;
-    margin-bottom: 26px;
+.profil__image {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
 }
 
-form input {
-    width: 100%;
-    height: 68px;
-    border: none;
-    border-radius: 5px;
+#profilLocation {
+  color: #901c1c;
+  font-weight: 400;
+  font-size: 1.5em;
+}
+
+#profilImage {
+  width: 12em;
+  height: 12em;
+}
+
+#profil__media {
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5em;
+}
+
+#profilTagline {
+  color: #525252;
 }
