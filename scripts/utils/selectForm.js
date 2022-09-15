@@ -6,7 +6,11 @@ const dropdownOptions = document.querySelectorAll(".dropdown-list li");
 dropdownToggle.addEventListener("click", () => {
   handleDropdownToggle(true);
 });
-
+window.addEventListener("click", (event) => {
+  if (!(event.target === dropdownToggle)) {
+      handleDropdownToggle(false);
+  }
+});
 // Afficher les options du select
 function handleDropdownToggle(show) {
   let expanded =
